@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+  	<!-- Debug References -->
+	<!-- <ItemGroup>
+		<Reference Include="DataToTable">
+			<HintPath>..\..\datatotable\DataToTable\bin\Debug\net6.0\DataToTable.dll</HintPath>
+		</Reference>
+		<Reference Include="ModelHelper">
+			<HintPath>..\..\model-helper\ModelHelper\bin\Debug\net6.0\ModelHelper.dll</HintPath>
+		</Reference>
+    	<Reference Include="Log.Data">
+			<HintPath>..\..\log-data\Log.Data\bin\Debug\net6.0\Log.Data.dll</HintPath>
+		</Reference>
+	</ItemGroup> -->
+
+	<!-- Release References -->
+	<ItemGroup>
+		<Reference Include="DataToTable">
+			<HintPath>..\..\..\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
+		</Reference>
+		<Reference Include="ModelHelper">
+			<HintPath>..\..\..\Build\model-helper\ModelHelper\ModelHelper.dll</HintPath>
+		</Reference>
+    	<Reference Include="Log.Data">
+			<HintPath>..\..\..\Build\log-data\Log.Data\Log.Data.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>
