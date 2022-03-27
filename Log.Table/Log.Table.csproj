@@ -6,8 +6,15 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Unity" Version="5.11.10" />
+	</ItemGroup>
+
   	<!-- Debug References -->
 	<!-- <ItemGroup>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>
+		</Reference>
 		<Reference Include="DataToTable">
 			<HintPath>..\..\datatotable\DataToTable\bin\Debug\net6.0\DataToTable.dll</HintPath>
 		</Reference>
@@ -21,6 +28,9 @@
 
 	<!-- Release References -->
 	<ItemGroup>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
+		</Reference>
 		<Reference Include="DataToTable">
 			<HintPath>..\..\..\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
 		</Reference>
