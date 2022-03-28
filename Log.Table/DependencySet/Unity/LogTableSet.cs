@@ -4,7 +4,7 @@ using Log.Data;
 using Unity;
 using Task = Log.Data.Task;
 
-namespace Log.Table;
+namespace Log.Table.Unity;
 
 public class LogTableSet 
     : DataToTableSet

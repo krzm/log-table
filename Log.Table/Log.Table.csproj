@@ -8,10 +8,11 @@
 
 	<ItemGroup>
 		<PackageReference Include="Unity" Version="5.11.10" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
 	</ItemGroup>
 
   	<!-- Debug References -->
-	<!-- <ItemGroup>
+	<ItemGroup>
 		<Reference Include="DIHelper">
 			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>
 		</Reference>
@@ -24,10 +25,10 @@
     	<Reference Include="Log.Data">
 			<HintPath>..\..\log-data\Log.Data\bin\Debug\net6.0\Log.Data.dll</HintPath>
 		</Reference>
-	</ItemGroup> -->
+	</ItemGroup>
 
 	<!-- Release References -->
-	<ItemGroup>
+	<!-- <ItemGroup>
 		<Reference Include="DIHelper">
 			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
 		</Reference>
@@ -40,5 +41,5 @@
     	<Reference Include="Log.Data">
 			<HintPath>..\..\..\Build\log-data\Log.Data\Log.Data.dll</HintPath>
 		</Reference>
-	</ItemGroup>
+	</ItemGroup> -->
 </Project>
