@@ -20,19 +20,31 @@ public abstract class LogToText
 	protected string GetId(LogModel m) => 
 		m.Id.ToString();
 	
-	protected string GetTask(LogModel m) =>
-		m.Task.Name;
+	protected string GetTask(LogModel m)
+    {
+        ArgumentNullException.ThrowIfNull(m.Task);
+        ArgumentNullException.ThrowIfNull(m.Task.Name);
+        return m.Task.Name;
+    }
 
     protected string GetTaskId(LogModel m) => 
 		m.TaskId.ToString();
 
-	protected string GetCategory(LogModel m) => 
-		m.Task.Category.Name.ToString();
+	protected string GetCategory(LogModel m)
+    {
+        ArgumentNullException.ThrowIfNull(m.Task);
+        ArgumentNullException.ThrowIfNull(m.Task.Category);
+        ArgumentNullException.ThrowIfNull(m.Task.Category.Name);
+        return m.Task.Category.Name;
+    }
 
-	protected string GetCategoryId(LogModel m) => 
-		m.Task.CategoryId.ToString();
+    protected string GetCategoryId(LogModel m)
+    {
+        ArgumentNullException.ThrowIfNull(m.Task);
+        return m.Task.CategoryId.ToString();
+    }
 
-	protected string GetStart(LogModel m) =>
+    protected string GetStart(LogModel m) =>
 		m.Start.HasValue ?
 			m.Start.Value.ToString(DateTimeFormat1) : "";
 
@@ -44,9 +56,13 @@ public abstract class LogToText
 		$"{m.Time.Hours}:{m.Time.Minutes}";
 	
 	protected string GetDescription(LogModel m) => 
-		string.IsNullOrWhiteSpace(m.Description) == false ? 
+		string.IsNullOrWhiteSpace(m.Description) == false ?
 			m.Description : "";
 	
-	protected string GetPlace(LogModel m) =>
-		m.Place.Name;
+	protected string GetPlace(LogModel m)
+    {
+        ArgumentNullException.ThrowIfNull(m.Place);
+        ArgumentNullException.ThrowIfNull(m.Place.Name);
+        return m.Place.Name;
+    }
 }
