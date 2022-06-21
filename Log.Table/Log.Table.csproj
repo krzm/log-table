@@ -1,17 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
-
 	<ItemGroup>
-		<PackageReference Include="Unity" Version="5.11.10" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Unity" Version="5.11.10"/>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0"/>
 	</ItemGroup>
-
-  	<!--Debug refs-->
+	<!--Debug refs-->
 	<!-- <ItemGroup>
 		<Reference Include="DIHelper">
 			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>
@@ -26,7 +23,6 @@
 			<HintPath>..\..\log-data\Log.Data\bin\Debug\net6.0\Log.Data.dll</HintPath>
 		</Reference>
 	</ItemGroup> -->
-
 	<!--Release refs-->
 	<ItemGroup>
 		<Reference Include="DIHelper">
@@ -38,7 +34,7 @@
 		<Reference Include="DataToTable">
 			<HintPath>..\..\..\Build\datatotable\DataToTable\DataToTable.dll</HintPath>
 		</Reference>
-    	<Reference Include="Log.Data">
+		<Reference Include="Log.Data">
 			<HintPath>..\..\..\Build\log-data\Log.Data\Log.Data.dll</HintPath>
 		</Reference>
 	</ItemGroup>
