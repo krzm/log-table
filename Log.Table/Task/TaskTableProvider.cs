@@ -30,10 +30,10 @@ public class TaskTableProvider
 	protected override void CreateTableRow(Data.Task t)
 	{
 		Editor.AddValue(GetColumnData(nameof(Data.Task.Id)), GetId(t));
-		Editor.AddValue(GetColumnData(nameof(Data.Task.Name)), t.Name);
+		Editor.AddValue(GetColumnData(nameof(Data.Task.Name)), GetName(t));
 		Editor.AddValue(GetColumnData(nameof(Data.Task.Category)), GetCategory(t));
 		Editor.AddValue(GetColumnData(nameof(Data.Task.CategoryId)), GetCategoryId(t));
-		Editor.AddValue(GetColumnData(nameof(Data.Task.Description)), t.Description);
+		Editor.AddValue(GetColumnData(nameof(Data.Task.Description)), GetDescription(t));
 	}
 
 	protected override void SetColumnsSize(List<Data.Task> items)

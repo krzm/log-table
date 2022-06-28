@@ -15,10 +15,26 @@ public abstract class TaskToText
 
 	protected string GetId(Data.Task t) => 
 		t.Id.ToString();
-	
-	protected string GetCategory(Data.Task t) => 
-		t.Category.Name.ToString();
+    
+    protected string GetName(Data.Task t)
+    {
+        ArgumentNullException.ThrowIfNull(t.Name);
+        return t.Name.ToString();
+    }
 
-	protected string GetCategoryId(Data.Task t) => 
+    protected string GetDescription(Data.Task t)
+    {
+        ArgumentNullException.ThrowIfNull(t.Description);
+        return t.Description.ToString();
+    }
+
+    protected string GetCategory(Data.Task t)
+    {
+        ArgumentNullException.ThrowIfNull(t.Category);
+        ArgumentNullException.ThrowIfNull(t.Category.Name);
+        return t.Category.Name.ToString();
+    }
+
+    protected string GetCategoryId(Data.Task t) => 
 		t.CategoryId.ToString();
 }

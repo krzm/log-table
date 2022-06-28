@@ -22,7 +22,7 @@ public abstract class TaskToColumn
 
 	protected List<int> GetNameLengths(List<Data.Task> models)
 	{
-		var rows = models.Select(m => m.Name.Length).ToList();
+		var rows = models.Select(m => GetName(m).Length).ToList();
 		rows.Insert(0, nameof(Data.Task.Name).Length);
 		return rows;
 	}
@@ -43,7 +43,7 @@ public abstract class TaskToColumn
 
 	protected List<int> GetDescriptionLengths(List<Data.Task> models)
 	{
-		var rows = models.Select(m => m.Description.Length).ToList();
+		var rows = models.Select(m => GetDescription(m).Length).ToList();
 		rows.Insert(0, nameof(Data.Task.Description).Length);
 		return rows;
 	}
